@@ -22,7 +22,7 @@ public abstract class Pets
         this.name = name;
     }//end set name
 
-    abstract public String speak(); //to overide child class
+    abstract public String speak(); //to be overriden in each child class - can't be used when object is a PET
 
     public double kgToPounds()
     {

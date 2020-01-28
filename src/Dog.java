@@ -8,6 +8,18 @@ public class Dog extends Pets
         this.breed = breed;
     }//end dog constructor with call to super
 
+    public String fetch()
+    {
+        if(Math.random() >= 0.5)
+        {
+            return "Fetch accomplished";
+        }
+        else
+        {
+            return "No fetching here";
+        }
+    }//end fetch method - exists in dog but not pet demos polymorphisim
+
     public String speak()
     {
         if(this.age < 2)
