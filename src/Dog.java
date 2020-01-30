@@ -2,9 +2,9 @@ public class Dog extends Pets
 {
     private String breed;
 
-    public Dog(String name, String breed, int age, double weight)
+    public Dog(String name, String breed, int age, double weight, boolean hasOwner, String food)
     {
-        super(name, age, weight);
+        super(name, age, weight, hasOwner, food);
         this.breed = breed;
     }//end dog constructor with call to super
 
@@ -27,6 +27,20 @@ public class Dog extends Pets
         else
             return "bark";
     }//end of speak
+
+    public int monthlyFeeding()
+    {
+        int dailyFeedings;
+        if(super.getAge() < 6)
+        {
+            dailyFeedings = 2;
+        }
+        else
+        {
+            dailyFeedings = 1;
+        }
+        return dailyFeedings * 30;
+    }//end of method explaining how many feedings per month, for bugetary reasons
     public String toString()
     {
         String output = "----DOG----";
